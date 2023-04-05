@@ -13,20 +13,15 @@ from datetime import date, datetime
 import pytz
 
 
-API_ID = int(environ.get('API_ID', "18302370"))
-API_HASH = environ.get('API_HASH', "03c2cced4dea9b1e96dce87558dd2381")
-BOT_TOKEN = environ.get('BOT_TOKEN', "6035089548:AAEND3aHeh6uTSVcERkuA7yGFOz6R8GU6nM")
-SESSION = environ.get('SESSION', "")
-TIME = environ.get('TIME', 600)
-GROUPS = []
-for grp in environ.get('GROUPS', "-1001784914514").split():
-    GROUPS.append(int(grp))
+API_ID = int(getenv("API_ID", "18302370"))
+API_HASH = getenv("API_HASH", "03c2cced4dea9b1e96dce87558dd2381")
+BOT_TOKEN = getenv("BOT_TOKEN", "5924932917:AAFHC6sQkot3C1GHeurOuY_K3eG-75KJ7LY")
+
 ADMINS = []
 for usr in environ.get('ADMINS', "1957296068").split():
     ADMINS.append(int(usr))
-ACC_ALL_CHAT = "-1001866499414"
-START_MSG = "<b>Hᴇʏ {} Iᴀᴍ Pʀɪᴠᴀᴛᴇ Bᴏᴛ Mᴀꜱᴛᴇʀ Oғ Tᴏ Uꜱᴇ Aᴜᴛᴏ Dᴇʟᴇᴛᴇ Aᴜᴛᴏ Aᴄᴄᴇᴘᴛ Aɴᴅ Mᴏʀᴇ...</b>\n<b>Iᴀᴍ Oғғɪᴄɪᴀʟʏ Wᴏʀᴋɪɴɢ Fᴏʀ Fɪʟɪᴍ Hᴏᴍᴇ Gʀᴏᴜᴘ</b>\n<b>Dᴏɴ'ᴛ Wᴀꜱᴛᴇ Yᴏᴜʀ Tɪᴍᴇ Tᴏ Aᴅᴅɪɴɢ Yᴏᴜʀ Gʀᴏᴜᴘ.. Iᴀᴍ Wᴏʀᴋꜱ Oɴʟʏ Mʏ Gʀᴏᴜᴘ</b>"
 
+START_MSG = "<b>Hᴇʟʟᴏ Iᴀᴍ Pʀɪᴠᴀᴛᴇ Bᴏᴛ CɪɴᴇMᴀVɪLLᴀ™ Oғɪᴄᴄɪᴀʟʏ Mᴀᴅᴇᴅ Fᴏʀ Aᴜᴛᴏ Aᴄᴄᴇᴘᴛ Iɴ Cʜᴀɴɴᴇʟꜱ..</b>"
 
 
 
