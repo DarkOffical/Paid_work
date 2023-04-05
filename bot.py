@@ -72,13 +72,12 @@ async def approve(client: Client, message: Message):
     user=message.from_user # User
     print(f"{user.first_name} 𝙹𝙾𝙸𝙽𝙴𝙳 ⚡") # Logs
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
-    img = random.choice(gif)
+    img = "https://telegra.ph/file/b959b8e70ea930e739728.jpg"
     add_user(user.id)
     #nothingenter
-    await client.send_video(user.id,img, "**Hello {}!\nYour Request To Join {} was approved👍\n\n⚠️click /start to see my power Powered By @sinimapremi **".format(message.from_user.mention, message.chat.title))
-    if ACC_SND_LOG == "on":
-        await client.send_message(LOG_CHANNEL, "**#New_Approval\n\n Name: {} \n\n Chat: {} \n\n By**".format(message.from_user.mention, message.chat.title))
-            
+    await client.send_photo(user.id,img, "**Hello {} Welcome To 🌸 {} 🌸\n\nPowerd By :@CinemavillaAutoAccept**".format(message.from_user.mention, message.chat.title))
+
+    
 @Client.on_message(filters.command("acceptedlist") & filters.user(ADMINS))
 async def dbtool(_, m : Message):
     xx = all_users()
