@@ -1,4 +1,4 @@
-from os import environ
+from os import environ, getenv 
 from pyrogram import idle
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram import Client, filters, errors, enums
