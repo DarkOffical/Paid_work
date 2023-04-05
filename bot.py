@@ -56,8 +56,8 @@ gif = [
 async def start(bot, message):
     add_user(message.from_user.id)
     buttons = [[
-        InlineKeyboardButton('Oᴡɴᴇʀ', user_id='1957296068'),
-        InlineKeyboardButton('Gʀᴏᴜᴘ', url='https://t.me/MaSTeR_filims')
+        InlineKeyboardButton('Oᴡɴᴇʀ', user_id='5821736028'),
+        InlineKeyboardButton('Cʜᴀɴɴᴇʟ', url='https://t.me/+Vb7QOqxBNHRmYzZk')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply(
