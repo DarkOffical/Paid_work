@@ -132,37 +132,8 @@ async def bcast(_, m : Message):
     
   
 
-@
-    chnl = await User.create_channel("Channel Title", "Channel Description")
-    await User.set_chat_photo(chat_id=chnl.id, photo="https://graph.org/file/0fab719eb1576a17830eb.jpg")
-                             
-    await message.reply_text(f"id : {chnl.id}")
 
-
-@Client.on_message(filters.command('linkdls') & filters.private)
-async def start(bot, message):
-    data = message.text
-    command, cid, clink = data.split(" ")  
-    mrn = await Client.get_chat_invite_link(chat_id=f'{cid}', invite_link=f'{clink}')
-    await message.reply_text(f"details : {mrn}")
-                                           
-@Client.on_callback_query(filters.regex(r"^time"))
-async def pm_next_page(bot, query):
-    tz = pytz.timezone('Asia/Kolkata')
-    today = date.today()
-    now = datetime.now(tz)
-    time = now.strftime("%I:%M:%S %p")
-    await query.answer(f"Hᴇʏ Bʀᴏ👋\n\nCᴜʀʀᴇɴᴛ Tɪᴍᴇ Iɴ Iɴᴅɪᴀ : {time}", show_alert=True)
-
-@Client.on_callback_query(filters.regex(r"^date"))
-async def pm_next_parge(bot, query):
-    tz = pytz.timezone('Asia/Kolkata')
-    today = date.today()
-    now = datetime.now(tz)
-    time = now.strftime("%I:%M:%S %p")
-    await query.answer(f"Tᴏᴅᴀʏ 🎗 \n 🗓 : {today}", show_alert=True)
-
-
+    
       
 Client.start()
 print("Bot Started!")
