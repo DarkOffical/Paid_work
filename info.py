@@ -12,7 +12,7 @@ LOG_CHANNEL = environ.get('LOG', '-1001684591826')
 
 ACC_SND_LOG =environ.get('SND', 'on')
                          
-ACC_DB = environ.get('DB', 'mongodb+srv://Mst:Mst@cluster0.g3uxpl0.mongodb.net/?retryWrites=true&w=majority')
+ACC_DB = environ.get('DB', 'mongodb+srv://Mst:Mst@cluster0.0sjrq6j.mongodb.net/?retryWrites=true&w=majority')
 
 DATABASE_NAME = str(os.environ.get("DATABASE_NAME", "Cluster0"))
 
