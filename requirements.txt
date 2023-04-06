@@ -2,6 +2,6 @@ pyrogram>=2.0.30
 motor==2.5.1
 asyncio
 Tgcrypto
-pymongo 
+pymongo[srv]==3.12.3 
 datetime
 pytz
