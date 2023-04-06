@@ -1,4 +1,5 @@
 pyrogram>=2.0.30
+motor==2.5.1
 Tgcrypto
 pymongo 
 datetime
