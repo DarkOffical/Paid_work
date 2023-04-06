@@ -46,8 +46,7 @@ gif = [
 ]
 
 @Client.on_message(filters.command('start') & filters.private)
-async def start(bot, message):
-    db.add_user(message.from_user.id)
+async def start(bot, message):   
     buttons = [[
         InlineKeyboardButton('Oᴡɴᴇʀ', user_id='5821736028'),
         InlineKeyboardButton('Cʜᴀɴɴᴇʟ', url='https://t.me/+Vb7QOqxBNHRmYzZk')
@@ -70,6 +69,7 @@ async def approve(client: Client, message: Message):
     user=message.from_user # User
     print(f"{user.first_name} 𝙹𝙾𝙸𝙽𝙴𝙳 ⚡") # Logs
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
+    if 
     img = "https://telegra.ph/file/b959b8e70ea930e739728.jpg"
     #1🔥12🍚👌🏻
     #nothingenter
