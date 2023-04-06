@@ -1,4 +1,5 @@
 import motor.motor_asyncio
+from info import ACC_DB, DATABASE_NAME
 
 class Database:
     
@@ -37,4 +38,4 @@ class Database:
      
      
     
-db = Database(DATABASE_URI, DATABASE_NAME)        
+db = Database(ACC_DB, DATABASE_NAME)        
