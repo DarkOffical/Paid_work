@@ -66,65 +66,16 @@ async def start(bot, message):
 @Client.on_chat_join_request(filters.group | filters.channel & ~filters.private)
 async def approve(client: Client, message: Message):
     chat=message.chat # Chat
-    add_group(chat.id)
+    #🥳🥳🔥
     user=message.from_user # User
     print(f"{user.first_name} 𝙹𝙾𝙸𝙽𝙴𝙳 ⚡") # Logs
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
     img = "https://telegra.ph/file/b959b8e70ea930e739728.jpg"
-    add_user(user.id)
+    #1🔥12🍚👌🏻
     #nothingenter
     await client.send_photo(user.id,img, "**Hello {} Welcome To 🌸 {} 🌸\n\nPowerd By :@CinemavillaAutoAccept**".format(message.from_user.mention, message.chat.title))
 
     
-@Client.on_message(filters.command("acceptedlist") & filters.user(ADMINS))
-async def dbtool(_, m : Message):
-    xx = all_users()
-    x = all_groups()
-    tot = int(xx + x)
-    await m.reply_text(text=f"""
-🍀 Chats Stats 🍀
-🙋‍♂️ Users : `{xx}`
-👥 Groups : `{x}`
-🚧 Total users & groups : `{tot}` """)
-    
-
-
-
-    
-@Client.on_message(filters.command("bcast") & filters.user(ADMINS))
-async def bcast(_, m : Message):
-    allusers = users
-    lel = await m.reply_text("`⚡️ Processing...`")
-    success = 0
-    failed = 0
-    deactivated = 0
-    blocked = 0
-    for usrs in allusers.find():
-        try:
-            userid = usrs["user_id"]
-            #print(int(userid))
-            if m.command[0] == "bcast":
-                await m.reply_to_message.copy(int(userid))
-            success +=1
-        except FloodWait as ex:
-            await asyncio.sleep(ex.value)
-            if m.command[0] == "bcast":
-                await m.reply_to_message.copy(int(userid))
-        except errors.InputUserDeactivated:
-            deactivated +=1
-            remove_user(userid)
-        except errors.UserIsBlocked:
-            blocked +=1
-        except Exception as e:
-            print(e)
-            failed +=1
-
-    await lel.edit(f"✅Successfull to `{success}` users.\n❌ Faild to `{failed}` users.\n👾 Found `{blocked}` Blocked users \n👻 Found `{deactivated}` Deactivated users.")
-
-    
-  
-
-
     
       
 Client.start()
