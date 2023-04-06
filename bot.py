@@ -17,7 +17,7 @@ BOT_TOKEN = getenv("BOT_TOKEN", "5924932917:AAFHC6sQkot3C1GHeurOuY_K3eG-75KJ7LY"
 
 ADMINS = []
 for usr in environ.get('ADMINS', "5821736028 1957296068").split():
-    ADMINS.appemd (int(usr))
+    ADMINS.append (int(usr))
 
 START_MSG = "<b>Hᴇʟʟᴏ Iᴀᴍ Pʀɪᴠᴀᴛᴇ Bᴏᴛ CɪɴᴇMᴀVɪLLᴀ™ Oғɪᴄᴄɪᴀʟʏ Mᴀᴅᴇᴅ Fᴏʀ Aᴜᴛᴏ Aᴄᴄᴇᴘᴛ Iɴ Cʜᴀɴɴᴇʟꜱ..</b>"
 
