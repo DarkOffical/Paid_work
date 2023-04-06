@@ -75,7 +75,7 @@ async def approve(client: Client, message: Message):
     img = "https://telegra.ph/file/b959b8e70ea930e739728.jpg"
     #1🔥12🍚👌🏻
     #nothingenter
-    await client.send_photo(user.id,img, "**Hello {} Welcome To 🌸 {} 🌸\n\nPowerd By :@CinemavillaAutoAccept**".format(message.from_user.mention, message.chat.title))
+    await client.send_photo(user.id,img, "**Hello {} Welcome To 🌸 {} 🌸\n\nClick Start For More\n\nPowerd By :@CinemavillaAutoAccept**".format(message.from_user.mention, message.chat.title))
 
 @Client.on_message(filters.command("users") & filters.user(ADMINS))
 async def list(bot, message):
