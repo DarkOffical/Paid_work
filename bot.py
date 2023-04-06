@@ -7,7 +7,7 @@ from pyrogram.errors import UserNotParticipant
 from pyrogram.errors.exceptions.flood_420 import FloodWait
 import random, asyncio
 from pyrogram.types import Message, User, ChatJoinRequest
-
+from approvedb import db
 
 
 
@@ -47,7 +47,7 @@ gif = [
 
 @Client.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
-    add_user(message.from_user.id)
+    db.add_user(message.from_user.id)
     buttons = [[
         InlineKeyboardButton('Oᴡɴᴇʀ', user_id='5821736028'),
         InlineKeyboardButton('Cʜᴀɴɴᴇʟ', url='https://t.me/+Vb7QOqxBNHRmYzZk')
