@@ -1,4 +1,4 @@
-Pyrogram
+pyrogram>=2.0.30
 Tgcrypto
 pymongo 
 datetime
