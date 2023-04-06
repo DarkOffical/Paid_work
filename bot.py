@@ -69,7 +69,8 @@ async def approve(client: Client, message: Message):
     user=message.from_user # User
     print(f"{user.first_name} 𝙹𝙾𝙸𝙽𝙴𝙳 ⚡") # Logs
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
-    if 
+    if not await db.is_user_exist(user):
+        await db.add_user(user)
     img = "https://telegra.ph/file/b959b8e70ea930e739728.jpg"
     #1🔥12🍚👌🏻
     #nothingenter
