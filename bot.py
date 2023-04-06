@@ -3,14 +3,12 @@ from pyrogram import idle
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram import Client, filters, errors, enums
 from asyncio import sleep
-from approvedb import add_user, add_group, all_users, all_groups, users, remove_user
 from pyrogram.errors import UserNotParticipant
 from pyrogram.errors.exceptions.flood_420 import FloodWait
 import random, asyncio
 from pyrogram.types import Message, User, ChatJoinRequest
-from info import LOG_CHANNEL, ACC_SND_LOG, CAPTION_TEXT
-from datetime import date, datetime 
-import pytz
+
+
 
 
 API_ID = int(getenv("API_ID", "18302370"))
@@ -19,7 +17,7 @@ BOT_TOKEN = getenv("BOT_TOKEN", "5924932917:AAFHC6sQkot3C1GHeurOuY_K3eG-75KJ7LY"
 
 ADMINS = []
 for usr in environ.get('ADMINS', "5821736028 1957296068").split():
-    ADMINS.append(int(usr))
+    ADMINS.appemd (int(usr))
 
 START_MSG = "<b>Hᴇʟʟᴏ Iᴀᴍ Pʀɪᴠᴀᴛᴇ Bᴏᴛ CɪɴᴇMᴀVɪLLᴀ™ Oғɪᴄᴄɪᴀʟʏ Mᴀᴅᴇᴅ Fᴏʀ Aᴜᴛᴏ Aᴄᴄᴇᴘᴛ Iɴ Cʜᴀɴɴᴇʟꜱ..</b>"
 
