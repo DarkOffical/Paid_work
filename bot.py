@@ -80,7 +80,7 @@ async def approve(client: Client, message: Message):
 @Client.on_message(filters.command("users") & filters.user(ADMINS))
 async def list(bot, message):
     total_users = await db.total_users_count()
-    await message.reply_text("Total Users Started : {total_users}")
+    await message.reply_text(f"Total Users Started : {total_users}")
 
 @Client.on_message(filters.command("broadcast") & filters.user(ADMINS) & filters.reply)
 async def verupikkals(bot, message):    
