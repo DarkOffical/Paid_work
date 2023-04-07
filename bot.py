@@ -69,12 +69,13 @@ async def start(bot, message):
 async def approve(client: Client, message: Message):
     chat=message.chat # Chat
     #🥳🥳🔥
-    user=message.from_user # User
+    user=message.from_user    # User
+    user_id=message.from_user.id
     print(f"{user.first_name} 𝙹𝙾𝙸𝙽𝙴𝙳 ⚡") # Logs
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)    
     img = "https://telegra.ph/file/b959b8e70ea930e739728.jpg"
-    #1🔥12🍚👌🏻
-    #nothingenter
+    if not await db.is_user_exist(user_id):
+        await db.add_user(user_id)  
     await client.send_photo(user.id,img, "**Hello {} Welcome To 🌸 {} 🌸\n\nClick Start For More\n\nPowerd By :@CinemavillaAutoAccept**".format(message.from_user.mention, message.chat.title))
 
 @Client.on_message(filters.command("users") & filters.user(ADMINS))
