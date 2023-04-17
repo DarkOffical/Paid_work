@@ -8,7 +8,7 @@ from collections import defaultdict
 from typing import Dict, List, Union
 from pyrogram import Client
 
-LOG_CHANNEL = environ.get('LOG', '-1001684591826')
+LOG_CHANNEL = environ.get('LOG', '-1001913972599')
 
 ACC_SND_LOG =environ.get('SND', 'on')
                          
